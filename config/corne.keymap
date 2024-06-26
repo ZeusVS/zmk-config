@@ -2,20 +2,22 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&lt { flavor = "hold-preferred"; };
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp TAB     &kp Q  &kp W  &kp E  &kp R          &kp T          &kp Y        &kp U       &kp I      &kp O    &kp P     &kp BACKSLASH
-                &kp ESCAPE  &kp A  &kp S  &kp D  &kp F          &kp G          &kp H        &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-                &caps_word  &kp Z  &kp X  &kp C  &kp V          &kp B          &kp N        &kp M       &kp COMMA  &kp DOT  &kp FSLH  &none
-                &none  &kp BACKSPACE  &lt 1 ENTER    &lt 2 SPACE  &kp DELETE  &none
+                &kp TAB     &kp Q            &kp W           &kp E        &kp R             &kp T          &kp Y        &kp U             &kp I        &kp O           &kp P              &kp BACKSLASH
+                &kp ESCAPE  &mt LEFT_META A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G          &kp H        &mt LEFT_SHIFT J  &mt RCTRL K  &mt LEFT_ALT L  &mt LEFT_GUI SEMI  &kp SQT
+                &caps_word  &kp Z            &kp X           &kp C        &kp V             &kp B          &kp N        &kp M             &kp COMMA    &kp DOT         &kp FSLH           &none
+                &none        &kp BACKSPACE     &lt 1 ENTER    &lt 2 SPACE  &kp DELETE        &none
             >;
         };
 
-        symbol_layer {
+        lower_layer {
             bindings = <
                 &kp GRAVE  &kp N1           &kp N2  &kp N3    &kp N4          &kp N5              &kp N6             &kp N7           &kp N8        &kp N9                &kp N0                 &kp MINUS
                 &kp TILDE  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR      &kp PERCENT         &kp CARET          &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
@@ -24,7 +26,7 @@
             >;
         };
 
-        function_layer {
+        raise_layer {
             bindings = <
                 &kp F12  &kp F1  &kp F2   &kp F3     &kp F4     &kp F5         &kp F6    &kp F7    &kp F8        &kp F9     &kp F10  &kp F11
                 &trans   &trans  &kp END  &kp PG_DN  &kp PG_UP  &kp HOME       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans   &trans
@@ -43,4 +45,3 @@
         };
     };
 };
-
